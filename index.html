@@ -389,10 +389,45 @@
     <div class="backdrop is-hidden" data-modal>
         <div class="modal-win">
             <button class="modal-close" data-modal-close>
-                <svg class="close-icon">
-                    <use href="./images/icons.svg#icon-close"></use>
-                </svg>
+                    <svg class="close-icon">
+                        <use href="./images/icons.svg#icon-close"></use>
+                    </svg>
             </button>
+            <form class="modal-form">
+                <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
+                <div class="field-list">
+                    <label for="" class="field-item">
+                        <span class="modal-label">Имя</span>
+                        <div class="input-block">
+                            <input type="text" id="name" class="modal-input">
+                            <svg class="form-icon">
+                                <use href="./images/icons.svg#icon-modal-person"></use>
+                            </svg>
+                        </div>
+                    </label>
+                    <label for="" class="field-item">
+                        <span class="modal-label">Телефон</span>
+                        <div class="input-block">
+                            <input type="tel" id="tel" class="modal-input">
+                            <svg class="form-icon">
+                                <use href="./images/icons.svg#icon-modal-phone"></use>
+                            </svg>
+                        </div>
+                    </label>
+                    <label for="" class="field-item">
+                        <span class="modal-label">Почта</span>
+                        <div class="input-block">
+                            <input type="email" id="email" class="modal-input">
+                            <svg class="form-icon">
+                                <use href="./images/icons.svg#icon-modal-email"></use>
+                            </svg>
+                        </div>
+                    </label>
+                    <span class="modal-label">Коментарий</span>
+                    <textarea class="modal-coment" name="coment" id="coment" cols="30" rows="10" placeholder="Введите текст"></textarea>
+                </div>
+            </form>
+            
         </div>
     </div>
     <script src="./js/modal.js"></script>

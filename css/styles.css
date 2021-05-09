@@ -43,6 +43,7 @@ a {
   --grey: #757575;
   --color-title: #212121;
   --caps: uppercase;
+  --time-animation: cubic-bezier(0.4, 0, 0.2, 1);
 }
 header .container {
   display: flex;
@@ -610,14 +611,19 @@ nav {
   background: rgba(0, 0, 0, 0.2);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .modal-win {
   position: absolute;
-  content: "";
   background-color: #fff;
   width: 528px;
   height: 581px;
   top: 50%;
   left: 50%;
+  border-radius: 4px;
   transform: translate(-50%, -50%);
 }
 
@@ -640,9 +646,106 @@ nav {
   height: 18px;
   fill: black;
 }
-.backdrop.is-hidden {
-  opacity: 0;
-  pointer-events: none;
+
+.modal-form {
+  width: 100%;
+  padding: 40px;
+}
+
+.modal-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 12px;
+  color: var(--color-title);
+}
+
+.field-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.field-item {
+  display: block;
+}
+
+.modal-label {
+  display: block;
+  content: "";
+  margin-bottom: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  color: var(--grey);
+}
+
+.input-block {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.input-block:focus-within > .modal-input {
+  outline: none;
+  border: var(--color-link) 1px solid;
+}
+
+.input-block:focus-within > .form-icon {
+  fill: var(--color-link);
+}
+
+.field-item .modal-input {
+  padding: 10px 0px 10px 42px;
+  width: 100%;
+
+  color: var(--color-title);
+  font-family: var(--font);
+  font-weight: 400;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  transition: border 250ms var(--time-animation);
+}
+
+.field-list .modal-coment {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  height: 120px;
+  padding: 12px 16px 12px 16px;
+  font-family: var(--font);
+  color: var(--color-title);
+  resize: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  transition: border 200ms var(--time-animation);
+}
+
+.modal-coment::placeholder {
+  font-family: var(--font);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-coment:focus {
+  outline: none;
+  border: 1px solid #2196f3;
+}
+
+.form-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  transition: fill 250ms var(--time-animation);
 }
 
 /* PAGE 2 ************************************************************************************************************/
