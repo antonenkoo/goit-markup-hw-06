@@ -291,7 +291,9 @@
         </section>
         <section class="clients-section">
             <div class="container">
-                <div><h2 class="title-clients">Постоянные клиенты</h2></div>
+                <div>
+                    <h2 class="title-clients">Постоянные клиенты</h2>
+                </div>
                 <ul class="clients-list">
                     <li class="clients-item">
                         <a href="" class="clients-link">
@@ -341,49 +343,60 @@
     </main>
     <footer class="footer">
         <div class="container footer-content">
-        <div class="info-footer">
-            <a class="webstudio logo-footer" href="./index.html"><span class="web">Web</span><span class="white">Studio</span></a>
-            <address class="contacts-footer">
-                <a class="address" href="https://goo.gl/maps/ej4Smdti3u1UPX647"> г. Киев, пр-т Леси Украинки, 26</a>
-                <ul class="contacts-footer">
-                    <li><a class="mail-footer" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-                    <li><a class="tel-footer" href="tel:+380961111111">+38 096 111 11 11</a></li>
+            <div class="info-footer">
+                <a class="webstudio logo-footer" href="./index.html"><span class="web">Web</span><span class="white">Studio</span></a>
+                <address class="contacts-footer">
+                    <a class="address" href="https://goo.gl/maps/ej4Smdti3u1UPX647"> г. Киев, пр-т Леси Украинки, 26</a>
+                    <ul class="contacts-footer">
+                        <li><a class="mail-footer" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+                        <li><a class="tel-footer" href="tel:+380961111111">+38 096 111 11 11</a></li>
+                    </ul>
+                </address>
+            </div>
+            <div class="social-footer">
+                <h3 class="footer-title">присоединяйтесь</h3>
+                <ul class="list-icon-footer">
+                    <li class="footer-item">
+                        <a href="" class="footer-link">
+                            <svg class="footer-icon">
+                                <use href="./images/icons.svg#icon-instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="" class="footer-link">
+                            <svg class="footer-icon">
+                                <use href="./images/icons.svg#icon-twitter"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="" class="footer-link">
+                            <svg class="footer-icon">
+                                <use href="./images/icons.svg#icon-facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="" class="footer-link">
+                            <svg class="footer-icon">
+                                <use href="./images/icons.svg#icon-linkedin"></use>
+                            </svg>
+                        </a>
+                    </li>
                 </ul>
-            </address>
-        </div>
-        <div class="social-footer">
-            <h3 class="footer-title">присоединяйтесь</h3>
-            <ul class="list-icon-footer">
-                <li class="footer-item">
-                    <a href="" class="footer-link">
-                        <svg class="footer-icon">
-                            <use href="./images/icons.svg#icon-instagram"></use>
+            </div>
+            <div>
+                <h3 class="footer-title">Подпишитесь на рассылку</h3>
+                <form class="footer-form">
+                    <input type="email" class="footer-input" placeholder="E-mail" autocomplete="email">
+                    <button type="submit" class="footer-btn-follow">Подписаться
+                        <svg class="footer-icon-tg">
+                            <use href="../images/icons.svg#icon-tg"></use>
                         </svg>
-                    </a>
-                </li>
-                <li class="footer-item">
-                    <a href="" class="footer-link">
-                        <svg class="footer-icon">
-                            <use href="./images/icons.svg#icon-twitter"></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="footer-item">
-                    <a href="" class="footer-link">
-                        <svg class="footer-icon">
-                            <use href="./images/icons.svg#icon-facebook"></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="footer-item">
-                    <a href="" class="footer-link">
-                        <svg class="footer-icon">
-                            <use href="./images/icons.svg#icon-linkedin"></use>
-                        </svg>
-                    </a>
-                </li>
-            </ul>
-        </div>
+                    </button>
+            </form>
+            </div>
         </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
@@ -426,6 +439,14 @@
                     <span class="modal-label">Коментарий</span>
                     <textarea class="modal-coment" name="coment" id="coment" cols="30" rows="10" placeholder="Введите текст"></textarea>
                 </div>
+                <label class="check">
+                    <input class="modal-checkbox" type="checkbox" name="check-terms" value="yes">
+                    <span class="icon-check"></span>
+                    <span class="agreement">Соглашаюсь с рассылкой и принимаю 
+                        <a href="#" class="contract-terms">Условия договора</a>
+                    </span>
+                </label>
+                <button type="submit" class="submit-btn">Отправить</button>
             </form>
             
         </div>
