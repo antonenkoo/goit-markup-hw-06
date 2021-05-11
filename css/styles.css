@@ -568,7 +568,9 @@ nav {
   color: var(--color-link);
 }
 .info-footer {
+  /*
   margin-right: 70px;
+  */
 }
 .footer-title {
   color: #fff;
