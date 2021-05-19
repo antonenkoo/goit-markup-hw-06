@@ -522,6 +522,7 @@ nav {
   align-items: baseline;
   display: flex;
   justify-content: space-between;
+  min-width: 1200px;
 }
 .white {
   color: #fff;
